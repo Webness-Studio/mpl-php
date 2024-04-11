@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace WebnessStudio/MPL/Model\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \WebnessStudio/MPL/Model\ObjectSerializer;
 
 /**
  * ShipmentItemAddRequest Class Doc Comment
  *
  * @category Class
  * @description Csomagok nem együtt kézbesítendő szállítmányba történő felvételéhez szükséges adatok   /   Data required for the inclusion of parcels in a consignment not to be delivered at the same time
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class ShipmentItemAddRequest implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'label_type' => 'string',
         'label_format' => 'string',
-        'items' => '\Swagger\Client\Model\Item[]'
+        'items' => '\WebnessStudio/MPL/Model\Model\Item[]'
     ];
 
     /**
@@ -341,7 +341,7 @@ class ShipmentItemAddRequest implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Swagger\Client\Model\Item[]
+     * @return \WebnessStudio/MPL/Model\Model\Item[]
      */
     public function getItems()
     {
@@ -351,7 +351,7 @@ class ShipmentItemAddRequest implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Swagger\Client\Model\Item[] $items A tételek (csomagok) felsorolása.   /   List of items (parcels).
+     * @param \WebnessStudio/MPL/Model\Model\Item[] $items A tételek (csomagok) felsorolása.   /   List of items (parcels).
      *
      * @return $this
      */

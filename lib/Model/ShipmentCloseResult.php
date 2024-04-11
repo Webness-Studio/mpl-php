@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace WebnessStudio/MPL/Model\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \WebnessStudio/MPL/Model\ObjectSerializer;
 
 /**
  * ShipmentCloseResult Class Doc Comment
  *
  * @category Class
  * @description Szállítmány zárás eredménye   /   Result of consignment closing
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,9 +60,9 @@ class ShipmentCloseResult implements ModelInterface, ArrayAccess
         'manifest' => 'string',
         'manifest_sum' => 'string',
         'manifest_ra' => 'string',
-        'tracking_nr_prices' => '\Swagger\Client\Model\TrackingNrPrice[]',
-        'errors' => '\Swagger\Client\Model\ErrorDescriptor[]',
-        'warnings' => '\Swagger\Client\Model\WarningDescriptor[]'
+        'tracking_nr_prices' => '\WebnessStudio/MPL/Model\Model\TrackingNrPrice[]',
+        'errors' => '\WebnessStudio/MPL/Model\Model\ErrorDescriptor[]',
+        'warnings' => '\WebnessStudio/MPL/Model\Model\WarningDescriptor[]'
     ];
 
     /**
@@ -307,7 +307,7 @@ class ShipmentCloseResult implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_nr_prices
      *
-     * @return \Swagger\Client\Model\TrackingNrPrice[]
+     * @return \WebnessStudio/MPL/Model\Model\TrackingNrPrice[]
      */
     public function getTrackingNrPrices()
     {
@@ -317,7 +317,7 @@ class ShipmentCloseResult implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_nr_prices
      *
-     * @param \Swagger\Client\Model\TrackingNrPrice[] $tracking_nr_prices Szállítmány feladási díjak   /   Consignment postage fees
+     * @param \WebnessStudio/MPL/Model\Model\TrackingNrPrice[] $tracking_nr_prices Szállítmány feladási díjak   /   Consignment postage fees
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class ShipmentCloseResult implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \Swagger\Client\Model\ErrorDescriptor[]
+     * @return \WebnessStudio/MPL/Model\Model\ErrorDescriptor[]
      */
     public function getErrors()
     {
@@ -341,7 +341,7 @@ class ShipmentCloseResult implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \Swagger\Client\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
+     * @param \WebnessStudio/MPL/Model\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class ShipmentCloseResult implements ModelInterface, ArrayAccess
     /**
      * Gets warnings
      *
-     * @return \Swagger\Client\Model\WarningDescriptor[]
+     * @return \WebnessStudio/MPL/Model\Model\WarningDescriptor[]
      */
     public function getWarnings()
     {
@@ -365,7 +365,7 @@ class ShipmentCloseResult implements ModelInterface, ArrayAccess
     /**
      * Sets warnings
      *
-     * @param \Swagger\Client\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.   /   Deficiencies detected during the execution of the request. If the list contains an item, the request was completed successfully.
+     * @param \WebnessStudio/MPL/Model\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.   /   Deficiencies detected during the execution of the request. If the list contains an item, the request was completed successfully.
      *
      * @return $this
      */

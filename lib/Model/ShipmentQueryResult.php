@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace WebnessStudio/MPL/Model\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \WebnessStudio/MPL/Model\ObjectSerializer;
 
 /**
  * ShipmentQueryResult Class Doc Comment
  *
  * @category Class
  * @description Szállítmány lekérdezés eredménye   /   Consignment query result
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class ShipmentQueryResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'shipment' => '\Swagger\Client\Model\Shipment',
-        'errors' => '\Swagger\Client\Model\ErrorDescriptor[]'
+        'shipment' => '\WebnessStudio/MPL/Model\Model\Shipment',
+        'errors' => '\WebnessStudio/MPL/Model\Model\ErrorDescriptor[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class ShipmentQueryResult implements ModelInterface, ArrayAccess
     /**
      * Gets shipment
      *
-     * @return \Swagger\Client\Model\Shipment
+     * @return \WebnessStudio/MPL/Model\Model\Shipment
      */
     public function getShipment()
     {
@@ -221,7 +221,7 @@ class ShipmentQueryResult implements ModelInterface, ArrayAccess
     /**
      * Sets shipment
      *
-     * @param \Swagger\Client\Model\Shipment $shipment shipment
+     * @param \WebnessStudio/MPL/Model\Model\Shipment $shipment shipment
      *
      * @return $this
      */
@@ -235,7 +235,7 @@ class ShipmentQueryResult implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \Swagger\Client\Model\ErrorDescriptor[]
+     * @return \WebnessStudio/MPL/Model\Model\ErrorDescriptor[]
      */
     public function getErrors()
     {
@@ -245,7 +245,7 @@ class ShipmentQueryResult implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \Swagger\Client\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
+     * @param \WebnessStudio/MPL/Model\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
      *
      * @return $this
      */

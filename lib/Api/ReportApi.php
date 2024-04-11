@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace WebnessStudio/MPL/Model\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use WebnessStudio/MPL/Model\ApiException;
+use WebnessStudio/MPL/Model\Configuration;
+use WebnessStudio/MPL/Model\HeaderSelector;
+use WebnessStudio/MPL/Model\ObjectSerializer;
 
 /**
  * ReportApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,12 +93,12 @@ class ReportApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ReportsQueryRequest $body body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ReportsQueryRequest $body body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ReportsQueryResult
+     * @return \WebnessStudio/MPL/Model\Model\ReportsQueryResult
      */
     public function reportsPost($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
@@ -113,16 +113,16 @@ class ReportApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ReportsQueryRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ReportsQueryRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ReportsQueryResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\ReportsQueryResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsPostWithHttpInfo($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ReportsQueryResult';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ReportsQueryResult';
         $request = $this->reportsPostRequest($x_request_id, $x_accounting_code, $body, $x_correlation_id);
 
         try {
@@ -174,7 +174,7 @@ class ReportApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ReportsQueryResult',
+                        '\WebnessStudio/MPL/Model\Model\ReportsQueryResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +182,7 @@ class ReportApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class ReportApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +198,7 @@ class ReportApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class ReportApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class ReportApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +222,7 @@ class ReportApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -230,7 +230,7 @@ class ReportApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -247,7 +247,7 @@ class ReportApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ReportsQueryRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ReportsQueryRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class ReportApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ReportsQueryRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ReportsQueryRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -278,7 +278,7 @@ class ReportApi
      */
     public function reportsPostAsyncWithHttpInfo($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ReportsQueryResult';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ReportsQueryResult';
         $request = $this->reportsPostRequest($x_request_id, $x_accounting_code, $body, $x_correlation_id);
 
         return $this->client
@@ -323,7 +323,7 @@ class ReportApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ReportsQueryRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ReportsQueryRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException

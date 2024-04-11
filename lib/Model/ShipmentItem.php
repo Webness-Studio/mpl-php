@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace WebnessStudio/MPL/Model\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \WebnessStudio/MPL/Model\ObjectSerializer;
 
 /**
  * ShipmentItem Class Doc Comment
  *
  * @category Class
  * @description Az egyes csomagok adatai.   /   Details of each parcel.
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,14 +59,14 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'custom_data1' => 'string',
         'custom_data2' => 'string',
-        'weight' => '\Swagger\Client\Model\UnitValue',
+        'weight' => '\WebnessStudio/MPL/Model\Model\UnitValue',
         'size' => 'string',
-        'services' => '\Swagger\Client\Model\Service',
+        'services' => '\WebnessStudio/MPL/Model\Model\Service',
         'ewc_code' => 'string',
         'fee' => 'double',
         'qr_code' => 'string',
-        'customs' => '\Swagger\Client\Model\Custom[]',
-        'documents' => '\Swagger\Client\Model\Document[]'
+        'customs' => '\WebnessStudio/MPL/Model\Model\Custom[]',
+        'documents' => '\WebnessStudio/MPL/Model\Model\Document[]'
     ];
 
     /**
@@ -335,7 +335,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets weight
      *
-     * @return \Swagger\Client\Model\UnitValue
+     * @return \WebnessStudio/MPL/Model\Model\UnitValue
      */
     public function getWeight()
     {
@@ -345,7 +345,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets weight
      *
-     * @param \Swagger\Client\Model\UnitValue $weight weight
+     * @param \WebnessStudio/MPL/Model\Model\UnitValue $weight weight
      *
      * @return $this
      */
@@ -392,7 +392,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets services
      *
-     * @return \Swagger\Client\Model\Service
+     * @return \WebnessStudio/MPL/Model\Model\Service
      */
     public function getServices()
     {
@@ -402,7 +402,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets services
      *
-     * @param \Swagger\Client\Model\Service $services services
+     * @param \WebnessStudio/MPL/Model\Model\Service $services services
      *
      * @return $this
      */
@@ -488,7 +488,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets customs
      *
-     * @return \Swagger\Client\Model\Custom[]
+     * @return \WebnessStudio/MPL/Model\Model\Custom[]
      */
     public function getCustoms()
     {
@@ -498,7 +498,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets customs
      *
-     * @param \Swagger\Client\Model\Custom[] $customs Árutartalom listája
+     * @param \WebnessStudio/MPL/Model\Model\Custom[] $customs Árutartalom listája
      *
      * @return $this
      */
@@ -512,7 +512,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Gets documents
      *
-     * @return \Swagger\Client\Model\Document[]
+     * @return \WebnessStudio/MPL/Model\Model\Document[]
      */
     public function getDocuments()
     {
@@ -522,7 +522,7 @@ class ShipmentItem implements ModelInterface, ArrayAccess
     /**
      * Sets documents
      *
-     * @param \Swagger\Client\Model\Document[] $documents Dokumentumok listája
+     * @param \WebnessStudio/MPL/Model\Model\Document[] $documents Dokumentumok listája
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace WebnessStudio/MPL/Model\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \WebnessStudio/MPL/Model\ObjectSerializer;
 
 /**
  * DeliveryPlaceResult Class Doc Comment
  *
  * @category Class
  * @description Alternatív kézbesítési helyek lekérdezésének eredménye   /   Alternative delivery locations query results
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class DeliveryPlaceResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'deliveryplaces_query_result' => '\Swagger\Client\Model\DeliveryplacesQueryResult',
+        'deliveryplaces_query_result' => '\WebnessStudio/MPL/Model\Model\DeliveryplacesQueryResult',
         'service_point_type' => 'string[]'
     ];
 
@@ -227,7 +227,7 @@ class DeliveryPlaceResult implements ModelInterface, ArrayAccess
     /**
      * Gets deliveryplaces_query_result
      *
-     * @return \Swagger\Client\Model\DeliveryplacesQueryResult
+     * @return \WebnessStudio/MPL/Model\Model\DeliveryplacesQueryResult
      */
     public function getDeliveryplacesQueryResult()
     {
@@ -237,7 +237,7 @@ class DeliveryPlaceResult implements ModelInterface, ArrayAccess
     /**
      * Sets deliveryplaces_query_result
      *
-     * @param \Swagger\Client\Model\DeliveryplacesQueryResult $deliveryplaces_query_result deliveryplaces_query_result
+     * @param \WebnessStudio/MPL/Model\Model\DeliveryplacesQueryResult $deliveryplaces_query_result deliveryplaces_query_result
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace WebnessStudio/MPL/Model\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use WebnessStudio/MPL/Model\ApiException;
+use WebnessStudio/MPL/Model\Configuration;
+use WebnessStudio/MPL/Model\HeaderSelector;
+use WebnessStudio/MPL/Model\ObjectSerializer;
 
 /**
  * ShipmentApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  WebnessStudio/MPL/Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,12 +93,12 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCloseRequest $body body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCloseRequest $body body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ShipmentCloseResult[]
+     * @return \WebnessStudio/MPL/Model\Model\ShipmentCloseResult[]
      */
     public function shipmentsClosePost($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
@@ -113,16 +113,16 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCloseRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCloseRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ShipmentCloseResult[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\ShipmentCloseResult[], HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsClosePostWithHttpInfo($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentCloseResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentCloseResult[]';
         $request = $this->shipmentsClosePostRequest($x_request_id, $x_accounting_code, $body, $x_correlation_id);
 
         try {
@@ -174,7 +174,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ShipmentCloseResult[]',
+                        '\WebnessStudio/MPL/Model\Model\ShipmentCloseResult[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -182,7 +182,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -190,7 +190,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -198,7 +198,7 @@ class ShipmentApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -214,7 +214,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -222,7 +222,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -230,7 +230,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -247,7 +247,7 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCloseRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCloseRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -270,7 +270,7 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCloseRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCloseRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -278,7 +278,7 @@ class ShipmentApi
      */
     public function shipmentsClosePostAsyncWithHttpInfo($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentCloseResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentCloseResult[]';
         $request = $this->shipmentsClosePostRequest($x_request_id, $x_accounting_code, $body, $x_correlation_id);
 
         return $this->client
@@ -323,7 +323,7 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCloseRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCloseRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -453,9 +453,9 @@ class ShipmentApi
      * @param  string[] $tracking_numbers A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs (optional)
      * @param  string $tag Küldemény cimkéje   /   Mail item label (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ShipmentQueryResult[]
+     * @return \WebnessStudio/MPL/Model\Model\ShipmentQueryResult[]
      */
     public function shipmentsGet($x_request_id, $x_accounting_code, $x_correlation_id = null, $from_date = null, $to_date = null, $tracking_numbers = null, $tag = null)
     {
@@ -476,13 +476,13 @@ class ShipmentApi
      * @param  string[] $tracking_numbers A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs (optional)
      * @param  string $tag Küldemény cimkéje   /   Mail item label (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ShipmentQueryResult[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\ShipmentQueryResult[], HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsGetWithHttpInfo($x_request_id, $x_accounting_code, $x_correlation_id = null, $from_date = null, $to_date = null, $tracking_numbers = null, $tag = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentQueryResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentQueryResult[]';
         $request = $this->shipmentsGetRequest($x_request_id, $x_accounting_code, $x_correlation_id, $from_date, $to_date, $tracking_numbers, $tag);
 
         try {
@@ -534,7 +534,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ShipmentQueryResult[]',
+                        '\WebnessStudio/MPL/Model\Model\ShipmentQueryResult[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -542,7 +542,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -558,7 +558,7 @@ class ShipmentApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -566,7 +566,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -574,7 +574,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -582,7 +582,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -590,7 +590,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -644,7 +644,7 @@ class ShipmentApi
      */
     public function shipmentsGetAsyncWithHttpInfo($x_request_id, $x_accounting_code, $x_correlation_id = null, $from_date = null, $to_date = null, $tracking_numbers = null, $tag = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentQueryResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentQueryResult[]';
         $request = $this->shipmentsGetRequest($x_request_id, $x_accounting_code, $x_correlation_id, $from_date, $to_date, $tracking_numbers, $tag);
 
         return $this->client
@@ -839,9 +839,9 @@ class ShipmentApi
      * @param  string $order_by A címiratok sorrendje a PDF fájlon belül.   /   Order of the address labels in the PDF file. (optional)
      * @param  bool $single_file Az eredmény címiratok egyetlen PDF fájlban vagy külön PDF fájlokban készüljenek   /   Create address label results in a single PDF or in separate PDFs (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LabelQueryResult[]
+     * @return \WebnessStudio/MPL/Model\Model\LabelQueryResult[]
      */
     public function shipmentsLabelGet($x_request_id, $x_accounting_code, $x_correlation_id = null, $tracking_numbers = null, $label_type = null, $label_format = 'PDF', $order_by = null, $single_file = null)
     {
@@ -863,13 +863,13 @@ class ShipmentApi
      * @param  string $order_by A címiratok sorrendje a PDF fájlon belül.   /   Order of the address labels in the PDF file. (optional)
      * @param  bool $single_file Az eredmény címiratok egyetlen PDF fájlban vagy külön PDF fájlokban készüljenek   /   Create address label results in a single PDF or in separate PDFs (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LabelQueryResult[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\LabelQueryResult[], HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsLabelGetWithHttpInfo($x_request_id, $x_accounting_code, $x_correlation_id = null, $tracking_numbers = null, $label_type = null, $label_format = 'PDF', $order_by = null, $single_file = null)
     {
-        $returnType = '\Swagger\Client\Model\LabelQueryResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\LabelQueryResult[]';
         $request = $this->shipmentsLabelGetRequest($x_request_id, $x_accounting_code, $x_correlation_id, $tracking_numbers, $label_type, $label_format, $order_by, $single_file);
 
         try {
@@ -921,7 +921,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LabelQueryResult[]',
+                        '\WebnessStudio/MPL/Model\Model\LabelQueryResult[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -929,7 +929,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -937,7 +937,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -945,7 +945,7 @@ class ShipmentApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -953,7 +953,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -961,7 +961,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -969,7 +969,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -977,7 +977,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1033,7 +1033,7 @@ class ShipmentApi
      */
     public function shipmentsLabelGetAsyncWithHttpInfo($x_request_id, $x_accounting_code, $x_correlation_id = null, $tracking_numbers = null, $label_type = null, $label_format = 'PDF', $order_by = null, $single_file = null)
     {
-        $returnType = '\Swagger\Client\Model\LabelQueryResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\LabelQueryResult[]';
         $request = $this->shipmentsLabelGetRequest($x_request_id, $x_accounting_code, $x_correlation_id, $tracking_numbers, $label_type, $label_format, $order_by, $single_file);
 
         return $this->client
@@ -1226,12 +1226,12 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ShipmentCreateResult[]
+     * @return \WebnessStudio/MPL/Model\Model\ShipmentCreateResult[]
      */
     public function shipmentsPost($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
@@ -1246,16 +1246,16 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ShipmentCreateResult[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\ShipmentCreateResult[], HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsPostWithHttpInfo($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentCreateResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentCreateResult[]';
         $request = $this->shipmentsPostRequest($x_request_id, $x_accounting_code, $body, $x_correlation_id);
 
         try {
@@ -1307,7 +1307,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ShipmentCreateResult[]',
+                        '\WebnessStudio/MPL/Model\Model\ShipmentCreateResult[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1315,7 +1315,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1323,7 +1323,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1331,7 +1331,7 @@ class ShipmentApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1339,7 +1339,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1347,7 +1347,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1355,7 +1355,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1363,7 +1363,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1380,7 +1380,7 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -1403,7 +1403,7 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -1411,7 +1411,7 @@ class ShipmentApi
      */
     public function shipmentsPostAsyncWithHttpInfo($x_request_id, $x_accounting_code, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentCreateResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentCreateResult[]';
         $request = $this->shipmentsPostRequest($x_request_id, $x_accounting_code, $body, $x_correlation_id);
 
         return $this->client
@@ -1456,7 +1456,7 @@ class ShipmentApi
      *
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
-     * @param  \Swagger\Client\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentCreateRequest[] $body Az új szállítmányok értékei JSON formátumban. (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -1583,9 +1583,9 @@ class ShipmentApi
      * @param  string $tracking_number Szállítmány azonosító   /   Postal ID (required)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ShipmentDeleteResult
+     * @return \WebnessStudio/MPL/Model\Model\ShipmentDeleteResult
      */
     public function shipmentsTrackingNumberDelete($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id = null)
     {
@@ -1603,13 +1603,13 @@ class ShipmentApi
      * @param  string $tracking_number Szállítmány azonosító   /   Postal ID (required)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ShipmentDeleteResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\ShipmentDeleteResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsTrackingNumberDeleteWithHttpInfo($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentDeleteResult';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentDeleteResult';
         $request = $this->shipmentsTrackingNumberDeleteRequest($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id);
 
         try {
@@ -1661,7 +1661,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ShipmentDeleteResult',
+                        '\WebnessStudio/MPL/Model\Model\ShipmentDeleteResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1669,7 +1669,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1677,7 +1677,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1685,7 +1685,7 @@ class ShipmentApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1693,7 +1693,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1701,7 +1701,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1709,7 +1709,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1717,7 +1717,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1765,7 +1765,7 @@ class ShipmentApi
      */
     public function shipmentsTrackingNumberDeleteAsyncWithHttpInfo($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentDeleteResult';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentDeleteResult';
         $request = $this->shipmentsTrackingNumberDeleteRequest($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id);
 
         return $this->client
@@ -1948,9 +1948,9 @@ class ShipmentApi
      * @param  string $tracking_number Szállítmány azonosító   /   Postal ID (required)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ShipmentQueryResult
+     * @return \WebnessStudio/MPL/Model\Model\ShipmentQueryResult
      */
     public function shipmentsTrackingNumberGet($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id = null)
     {
@@ -1968,13 +1968,13 @@ class ShipmentApi
      * @param  string $tracking_number Szállítmány azonosító   /   Postal ID (required)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ShipmentQueryResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\ShipmentQueryResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsTrackingNumberGetWithHttpInfo($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentQueryResult';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentQueryResult';
         $request = $this->shipmentsTrackingNumberGetRequest($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id);
 
         try {
@@ -2026,7 +2026,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ShipmentQueryResult',
+                        '\WebnessStudio/MPL/Model\Model\ShipmentQueryResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2034,7 +2034,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2042,7 +2042,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2050,7 +2050,7 @@ class ShipmentApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2058,7 +2058,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2066,7 +2066,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2074,7 +2074,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2082,7 +2082,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2130,7 +2130,7 @@ class ShipmentApi
      */
     public function shipmentsTrackingNumberGetAsyncWithHttpInfo($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentQueryResult';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentQueryResult';
         $request = $this->shipmentsTrackingNumberGetRequest($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id);
 
         return $this->client
@@ -2311,12 +2311,12 @@ class ShipmentApi
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
      * @param  string $tracking_number tracking_number (required)
-     * @param  \Swagger\Client\Model\ShipmentItemAddRequest $body body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest $body body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ShipmentItemAddResult[]
+     * @return \WebnessStudio/MPL/Model\Model\ShipmentItemAddResult[]
      */
     public function shipmentsTrackingNumberItemPost($x_request_id, $x_accounting_code, $tracking_number, $body = null, $x_correlation_id = null)
     {
@@ -2332,16 +2332,16 @@ class ShipmentApi
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
      * @param  string $tracking_number (required)
-     * @param  \Swagger\Client\Model\ShipmentItemAddRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \WebnessStudio/MPL/Model\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ShipmentItemAddResult[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebnessStudio/MPL/Model\Model\ShipmentItemAddResult[], HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentsTrackingNumberItemPostWithHttpInfo($x_request_id, $x_accounting_code, $tracking_number, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentItemAddResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentItemAddResult[]';
         $request = $this->shipmentsTrackingNumberItemPostRequest($x_request_id, $x_accounting_code, $tracking_number, $body, $x_correlation_id);
 
         try {
@@ -2393,7 +2393,7 @@ class ShipmentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ShipmentItemAddResult[]',
+                        '\WebnessStudio/MPL/Model\Model\ShipmentItemAddResult[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2401,7 +2401,7 @@ class ShipmentApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2409,7 +2409,7 @@ class ShipmentApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2417,7 +2417,7 @@ class ShipmentApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2425,7 +2425,7 @@ class ShipmentApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2433,7 +2433,7 @@ class ShipmentApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2441,7 +2441,7 @@ class ShipmentApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2449,7 +2449,7 @@ class ShipmentApi
                 case 503:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ApiGatewayErrorResponse',
+                        '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2467,7 +2467,7 @@ class ShipmentApi
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
      * @param  string $tracking_number (required)
-     * @param  \Swagger\Client\Model\ShipmentItemAddRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -2491,7 +2491,7 @@ class ShipmentApi
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
      * @param  string $tracking_number (required)
-     * @param  \Swagger\Client\Model\ShipmentItemAddRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException
@@ -2499,7 +2499,7 @@ class ShipmentApi
      */
     public function shipmentsTrackingNumberItemPostAsyncWithHttpInfo($x_request_id, $x_accounting_code, $tracking_number, $body = null, $x_correlation_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ShipmentItemAddResult[]';
+        $returnType = '\WebnessStudio/MPL/Model\Model\ShipmentItemAddResult[]';
         $request = $this->shipmentsTrackingNumberItemPostRequest($x_request_id, $x_accounting_code, $tracking_number, $body, $x_correlation_id);
 
         return $this->client
@@ -2545,7 +2545,7 @@ class ShipmentApi
      * @param  string $x_request_id A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) (required)
      * @param  string $x_accounting_code Vevőkód   /   The accounting code (required)
      * @param  string $tracking_number (required)
-     * @param  \Swagger\Client\Model\ShipmentItemAddRequest $body (optional)
+     * @param  \WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest $body (optional)
      * @param  string $x_correlation_id Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) (optional)
      *
      * @throws \InvalidArgumentException

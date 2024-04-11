@@ -1,4 +1,4 @@
-# Swagger\Client\ShipmentApi
+# WebnessStudio/MPL/Model\ShipmentApi
 
 All URIs are relative to *https://sandbox.api.posta.hu/v2/mplapi*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**shipmentsTrackingNumberItemPost**](ShipmentApi.md#shipmentstrackingnumberitempost) | **POST** /shipments/{trackingNumber}/item | Új csomag(ok) felvétele meglevő nem együtt kézbesítendő szállítmányba.   /   Adding of new parcel(s) to an existing separately deliverable consignment.
 
 # **shipmentsClosePost**
-> \Swagger\Client\Model\ShipmentCloseResult[] shipmentsClosePost($x_request_id, $x_accounting_code, $body, $x_correlation_id)
+> \WebnessStudio/MPL/Model\Model\ShipmentCloseResult[] shipmentsClosePost($x_request_id, $x_accounting_code, $body, $x_correlation_id)
 
 Jegyzékzárási kérés. Egyazon beszállítással feladni kívánt csomagok halmazának zárása, továbbá a zárásról egy szállítólevél igénylése. A lezárandó szállítmányokban alkalmazott feladói adatok (megállapodás, feladói név, feladói cím, bankszámla), illetve az irány (inverz?) függvényében a válaszunk akár több objektumot is tartalmazhat.   /   Request for closing the list. Closing a set of mail items to be dispatched with the same transport, and requesting a delivery note on the closing of the list. Depending on the data (agreement, sender’s name, sender’s address, bank account) and direction (inverse?) used in the shipments to be closed, our response may contain several objects.
 
@@ -22,14 +22,14 @@ Jegyzékzárási kérés. Egyazon beszállítással feladni kívánt csomagok ha
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentApi(
+$apiInstance = new WebnessStudio/MPL/Model\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -37,7 +37,7 @@ $apiInstance = new Swagger\Client\Api\ShipmentApi(
 );
 $x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
 $x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$body = new \Swagger\Client\Model\ShipmentCloseRequest(); // \Swagger\Client\Model\ShipmentCloseRequest | 
+$body = new \WebnessStudio/MPL/Model\Model\ShipmentCloseRequest(); // \WebnessStudio/MPL/Model\Model\ShipmentCloseRequest | 
 $x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
 
 try {
@@ -55,12 +55,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
  **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **body** | [**\Swagger\Client\Model\ShipmentCloseRequest**](../Model/ShipmentCloseRequest.md)|  | [optional]
+ **body** | [**\WebnessStudio/MPL/Model\Model\ShipmentCloseRequest**](../Model/ShipmentCloseRequest.md)|  | [optional]
  **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentCloseResult[]**](../Model/ShipmentCloseResult.md)
+[**\WebnessStudio/MPL/Model\Model\ShipmentCloseResult[]**](../Model/ShipmentCloseResult.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentsGet**
-> \Swagger\Client\Model\ShipmentQueryResult[] shipmentsGet($x_request_id, $x_accounting_code, $x_correlation_id, $from_date, $to_date, $tracking_numbers, $tag)
+> \WebnessStudio/MPL/Model\Model\ShipmentQueryResult[] shipmentsGet($x_request_id, $x_accounting_code, $x_correlation_id, $from_date, $to_date, $tracking_numbers, $tag)
 
 Visszaadja, hogy az adott ügyfél milyen csomagjairól mit tud opcionálisan csak a megadott időpontok között és megadott darabszámig.   /   Indicates what is known about what parcels of the given customer, optionally, only between the specified times and up to the specified number of parcels.
 
@@ -83,14 +83,14 @@ Visszaadja, hogy az adott ügyfél milyen csomagjairól mit tud opcionálisan cs
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentApi(
+$apiInstance = new WebnessStudio/MPL/Model\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentQueryResult[]**](../Model/ShipmentQueryResult.md)
+[**\WebnessStudio/MPL/Model\Model\ShipmentQueryResult[]**](../Model/ShipmentQueryResult.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentsLabelGet**
-> \Swagger\Client\Model\LabelQueryResult[] shipmentsLabelGet($x_request_id, $x_accounting_code, $x_correlation_id, $tracking_numbers, $label_type, $label_format, $order_by, $single_file)
+> \WebnessStudio/MPL/Model\Model\LabelQueryResult[] shipmentsLabelGet($x_request_id, $x_accounting_code, $x_correlation_id, $tracking_numbers, $label_type, $label_format, $order_by, $single_file)
 
 Csomag(ok) címiratának lekérése.    /   Query address label of parcel(s)
 
@@ -150,14 +150,14 @@ Csomag(ok) címiratának lekérése.    /   Query address label of parcel(s)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentApi(
+$apiInstance = new WebnessStudio/MPL/Model\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\LabelQueryResult[]**](../Model/LabelQueryResult.md)
+[**\WebnessStudio/MPL/Model\Model\LabelQueryResult[]**](../Model/LabelQueryResult.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentsPost**
-> \Swagger\Client\Model\ShipmentCreateResult[] shipmentsPost($x_request_id, $x_accounting_code, $body, $x_correlation_id)
+> \WebnessStudio/MPL/Model\Model\ShipmentCreateResult[] shipmentsPost($x_request_id, $x_accounting_code, $body, $x_correlation_id)
 
 Csomagadat(ok) beküldése.   /   Submission of parcel data.
 
@@ -221,14 +221,14 @@ Egy hívásban legfeljebb 100 szállítmány adatai küldhetők be.             
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentApi(
+$apiInstance = new WebnessStudio/MPL/Model\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ $apiInstance = new Swagger\Client\Api\ShipmentApi(
 );
 $x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
 $x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$body = array(new \Swagger\Client\Model\ShipmentCreateRequest()); // \Swagger\Client\Model\ShipmentCreateRequest[] | Az új szállítmányok értékei JSON formátumban.
+$body = array(new \WebnessStudio/MPL/Model\Model\ShipmentCreateRequest()); // \WebnessStudio/MPL/Model\Model\ShipmentCreateRequest[] | Az új szállítmányok értékei JSON formátumban.
 $x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
 
 try {
@@ -254,12 +254,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
  **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **body** | [**\Swagger\Client\Model\ShipmentCreateRequest[]**](../Model/ShipmentCreateRequest.md)| Az új szállítmányok értékei JSON formátumban. | [optional]
+ **body** | [**\WebnessStudio/MPL/Model\Model\ShipmentCreateRequest[]**](../Model/ShipmentCreateRequest.md)| Az új szállítmányok értékei JSON formátumban. | [optional]
  **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentCreateResult[]**](../Model/ShipmentCreateResult.md)
+[**\WebnessStudio/MPL/Model\Model\ShipmentCreateResult[]**](../Model/ShipmentCreateResult.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentsTrackingNumberDelete**
-> \Swagger\Client\Model\ShipmentDeleteResult shipmentsTrackingNumberDelete($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id)
+> \WebnessStudio/MPL/Model\Model\ShipmentDeleteResult shipmentsTrackingNumberDelete($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id)
 
 Ragszám szerinti tétel törlése.   /   Deletion of item by tracking number.
 
@@ -282,14 +282,14 @@ Ragszám szerinti tétel törlése.   /   Deletion of item by tracking number.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentApi(
+$apiInstance = new WebnessStudio/MPL/Model\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentDeleteResult**](../Model/ShipmentDeleteResult.md)
+[**\WebnessStudio/MPL/Model\Model\ShipmentDeleteResult**](../Model/ShipmentDeleteResult.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentsTrackingNumberGet**
-> \Swagger\Client\Model\ShipmentQueryResult shipmentsTrackingNumberGet($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id)
+> \WebnessStudio/MPL/Model\Model\ShipmentQueryResult shipmentsTrackingNumberGet($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id)
 
 Ragszám szerinti feladandó tétel lekérdezése.   /   Querying of item to be sent through tracking number.
 
@@ -343,14 +343,14 @@ Ragszám szerinti feladandó tétel lekérdezése.   /   Querying of item to be 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentApi(
+$apiInstance = new WebnessStudio/MPL/Model\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentQueryResult**](../Model/ShipmentQueryResult.md)
+[**\WebnessStudio/MPL/Model\Model\ShipmentQueryResult**](../Model/ShipmentQueryResult.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **shipmentsTrackingNumberItemPost**
-> \Swagger\Client\Model\ShipmentItemAddResult[] shipmentsTrackingNumberItemPost($x_request_id, $x_accounting_code, $tracking_number, $body, $x_correlation_id)
+> \WebnessStudio/MPL/Model\Model\ShipmentItemAddResult[] shipmentsTrackingNumberItemPost($x_request_id, $x_accounting_code, $tracking_number, $body, $x_correlation_id)
 
 Új csomag(ok) felvétele meglevő nem együtt kézbesítendő szállítmányba.   /   Adding of new parcel(s) to an existing separately deliverable consignment.
 
@@ -404,14 +404,14 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ShipmentApi(
+$apiInstance = new WebnessStudio/MPL/Model\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -420,7 +420,7 @@ $apiInstance = new Swagger\Client\Api\ShipmentApi(
 $x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
 $x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
 $tracking_number = "tracking_number_example"; // string | 
-$body = new \Swagger\Client\Model\ShipmentItemAddRequest(); // \Swagger\Client\Model\ShipmentItemAddRequest | 
+$body = new \WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest(); // \WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest | 
 $x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
 
 try {
@@ -439,12 +439,12 @@ Name | Type | Description  | Notes
  **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
  **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
  **tracking_number** | **string**|  |
- **body** | [**\Swagger\Client\Model\ShipmentItemAddRequest**](../Model/ShipmentItemAddRequest.md)|  | [optional]
+ **body** | [**\WebnessStudio/MPL/Model\Model\ShipmentItemAddRequest**](../Model/ShipmentItemAddRequest.md)|  | [optional]
  **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ShipmentItemAddResult[]**](../Model/ShipmentItemAddResult.md)
+[**\WebnessStudio/MPL/Model\Model\ShipmentItemAddResult[]**](../Model/ShipmentItemAddResult.md)
 
 ### Authorization
 
