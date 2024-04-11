@@ -330,9 +330,9 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     public function getPrintRecipientDataAllowableValues()
     {
         return [
-            self::PRINT_RECIPIENT_DATA_PRINTALL
-            self::PRINT_RECIPIENT_DATA_PRINTPHONENUMBER
-            self::PRINT_RECIPIENT_DATA_PRINTEMAIL
+            self::PRINT_RECIPIENT_DATA_PRINTALL,
+            self::PRINT_RECIPIENT_DATA_PRINTPHONENUMBER,
+            self::PRINT_RECIPIENT_DATA_PRINTEMAIL,
             self::PRINT_RECIPIENT_DATA_PRINTNOTHING
         ];
     }

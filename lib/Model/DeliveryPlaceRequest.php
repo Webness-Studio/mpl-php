@@ -175,8 +175,8 @@ class DeliveryPlaceRequest implements ModelInterface, ArrayAccess
     public function getServicePointTypeAllowableValues()
     {
         return [
-            self::SERVICE_POINT_TYPE_PM
-            self::SERVICE_POINT_TYPE_CS
+            self::SERVICE_POINT_TYPE_PM,
+            self::SERVICE_POINT_TYPE_CS,
             self::SERVICE_POINT_TYPE_PP
         ];
     }

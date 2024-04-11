@@ -174,7 +174,7 @@ class UnitValue implements ModelInterface, ArrayAccess
     public function getUnitAllowableValues()
     {
         return [
-            self::UNIT_G
+            self::UNIT_G,
             self::UNIT_G_1
         ];
     }
