@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * Sender Class Doc Comment
  *
  * @category Class
  * @description A feladó adatai.   /   Data of the sender.
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,9 +59,9 @@ class Sender implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'agreement' => 'string',
         'account_no' => 'string',
-        'contact' => '\WebnessStudio/MPL/Model\Model\Contact',
-        'address' => '\WebnessStudio/MPL/Model\Model\Address',
-        'invoice' => '\WebnessStudio/MPL/Model\Model\Invoice',
+        'contact' => '\WebnessStudio\MPL\Model\Contact',
+        'address' => '\WebnessStudio\MPL\Model\Address',
+        'invoice' => '\WebnessStudio\MPL\Model\Invoice',
         'parcel_terminal' => 'bool'
     ];
 
@@ -292,7 +292,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Gets contact
      *
-     * @return \WebnessStudio/MPL/Model\Model\Contact
+     * @return \WebnessStudio\MPL\Model\Contact
      */
     public function getContact()
     {
@@ -302,7 +302,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Sets contact
      *
-     * @param \WebnessStudio/MPL/Model\Model\Contact $contact contact
+     * @param \WebnessStudio\MPL\Model\Contact $contact contact
      *
      * @return $this
      */
@@ -316,7 +316,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \WebnessStudio/MPL/Model\Model\Address
+     * @return \WebnessStudio\MPL\Model\Address
      */
     public function getAddress()
     {
@@ -326,7 +326,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WebnessStudio/MPL/Model\Model\Address $address address
+     * @param \WebnessStudio\MPL\Model\Address $address address
      *
      * @return $this
      */
@@ -340,7 +340,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Gets invoice
      *
-     * @return \WebnessStudio/MPL/Model\Model\Invoice
+     * @return \WebnessStudio\MPL\Model\Invoice
      */
     public function getInvoice()
     {
@@ -350,7 +350,7 @@ class Sender implements ModelInterface, ArrayAccess
     /**
      * Sets invoice
      *
-     * @param \WebnessStudio/MPL/Model\Model\Invoice $invoice invoice
+     * @param \WebnessStudio\MPL\Model\Invoice $invoice invoice
      *
      * @return $this
      */

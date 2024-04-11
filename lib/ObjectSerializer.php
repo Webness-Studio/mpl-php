@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,13 +26,13 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model;
+namespace WebnessStudio\MPL;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

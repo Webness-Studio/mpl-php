@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * NonUTF8Recipient Class Doc Comment
  *
  * @category Class
  * @description ►INT◄ Alternatív címzetti adatok (a nem csak latin betűket tartalmazó adatok itt adhatók meg, pl. kínai/cirill karakterek).\\   /   Alternative recipient data (data containing not only Latin characters can be entered here, e.g. Chinese/Cyrillic characters).
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class NonUTF8Recipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'contact' => '\WebnessStudio/MPL/Model\Model\NonUTF8Contact',
-        'address' => '\WebnessStudio/MPL/Model\Model\NonUTF8Address'
+        'contact' => '\WebnessStudio\MPL\Model\NonUTF8Contact',
+        'address' => '\WebnessStudio\MPL\Model\NonUTF8Address'
     ];
 
     /**
@@ -211,7 +211,7 @@ class NonUTF8Recipient implements ModelInterface, ArrayAccess
     /**
      * Gets contact
      *
-     * @return \WebnessStudio/MPL/Model\Model\NonUTF8Contact
+     * @return \WebnessStudio\MPL\Model\NonUTF8Contact
      */
     public function getContact()
     {
@@ -221,7 +221,7 @@ class NonUTF8Recipient implements ModelInterface, ArrayAccess
     /**
      * Sets contact
      *
-     * @param \WebnessStudio/MPL/Model\Model\NonUTF8Contact $contact contact
+     * @param \WebnessStudio\MPL\Model\NonUTF8Contact $contact contact
      *
      * @return $this
      */
@@ -235,7 +235,7 @@ class NonUTF8Recipient implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \WebnessStudio/MPL/Model\Model\NonUTF8Address
+     * @return \WebnessStudio\MPL\Model\NonUTF8Address
      */
     public function getAddress()
     {
@@ -245,7 +245,7 @@ class NonUTF8Recipient implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WebnessStudio/MPL/Model\Model\NonUTF8Address $address address
+     * @param \WebnessStudio\MPL\Model\NonUTF8Address $address address
      *
      * @return $this
      */

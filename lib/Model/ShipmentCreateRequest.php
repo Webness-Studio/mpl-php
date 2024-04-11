@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * ShipmentCreateRequest Class Doc Comment
  *
  * @category Class
  * @description Szállítmány létrehozásához szükséges adatok   /   Data required to create a consignment
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'developer' => 'string',
-        'sender' => '\WebnessStudio/MPL/Model\Model\Sender',
-        'non_utf8_sender' => '\WebnessStudio/MPL/Model\Model\NonUTF8Sender',
+        'sender' => '\WebnessStudio\MPL\Model\Sender',
+        'non_utf8_sender' => '\WebnessStudio\MPL\Model\NonUTF8Sender',
         'shipment_date' => '\DateTime',
         'order_id' => 'string',
         'webshop_id' => 'string',
@@ -69,9 +69,9 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
         'group_together' => 'bool',
         'delivery_time' => 'string',
         'delivery_date' => '\DateTime',
-        'item' => '\WebnessStudio/MPL/Model\Model\Item[]',
-        'recipient' => '\WebnessStudio/MPL/Model\Model\Recipient',
-        'non_utf8_recipient' => '\WebnessStudio/MPL/Model\Model\NonUTF8Recipient',
+        'item' => '\WebnessStudio\MPL\Model\Item[]',
+        'recipient' => '\WebnessStudio\MPL\Model\Recipient',
+        'non_utf8_recipient' => '\WebnessStudio\MPL\Model\NonUTF8Recipient',
         'payment_mode' => 'string',
         'package_retention' => 'int',
         'print_recipient_data' => 'string'
@@ -475,7 +475,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets sender
      *
-     * @return \WebnessStudio/MPL/Model\Model\Sender
+     * @return \WebnessStudio\MPL\Model\Sender
      */
     public function getSender()
     {
@@ -485,7 +485,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \WebnessStudio/MPL/Model\Model\Sender $sender sender
+     * @param \WebnessStudio\MPL\Model\Sender $sender sender
      *
      * @return $this
      */
@@ -499,7 +499,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets non_utf8_sender
      *
-     * @return \WebnessStudio/MPL/Model\Model\NonUTF8Sender
+     * @return \WebnessStudio\MPL\Model\NonUTF8Sender
      */
     public function getNonUtf8Sender()
     {
@@ -509,7 +509,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets non_utf8_sender
      *
-     * @param \WebnessStudio/MPL/Model\Model\NonUTF8Sender $non_utf8_sender non_utf8_sender
+     * @param \WebnessStudio\MPL\Model\NonUTF8Sender $non_utf8_sender non_utf8_sender
      *
      * @return $this
      */
@@ -766,7 +766,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets item
      *
-     * @return \WebnessStudio/MPL/Model\Model\Item[]
+     * @return \WebnessStudio\MPL\Model\Item[]
      */
     public function getItem()
     {
@@ -776,7 +776,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets item
      *
-     * @param \WebnessStudio/MPL/Model\Model\Item[] $item A tételek (csomagok) felsorolása.   /   List of items (parcels).
+     * @param \WebnessStudio\MPL\Model\Item[] $item A tételek (csomagok) felsorolása.   /   List of items (parcels).
      *
      * @return $this
      */
@@ -790,7 +790,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets recipient
      *
-     * @return \WebnessStudio/MPL/Model\Model\Recipient
+     * @return \WebnessStudio\MPL\Model\Recipient
      */
     public function getRecipient()
     {
@@ -800,7 +800,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets recipient
      *
-     * @param \WebnessStudio/MPL/Model\Model\Recipient $recipient recipient
+     * @param \WebnessStudio\MPL\Model\Recipient $recipient recipient
      *
      * @return $this
      */
@@ -814,7 +814,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Gets non_utf8_recipient
      *
-     * @return \WebnessStudio/MPL/Model\Model\NonUTF8Recipient
+     * @return \WebnessStudio\MPL\Model\NonUTF8Recipient
      */
     public function getNonUtf8Recipient()
     {
@@ -824,7 +824,7 @@ class ShipmentCreateRequest implements ModelInterface, ArrayAccess
     /**
      * Sets non_utf8_recipient
      *
-     * @param \WebnessStudio/MPL/Model\Model\NonUTF8Recipient $non_utf8_recipient non_utf8_recipient
+     * @param \WebnessStudio\MPL\Model\NonUTF8Recipient $non_utf8_recipient non_utf8_recipient
      *
      * @return $this
      */

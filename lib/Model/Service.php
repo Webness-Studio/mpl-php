@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * Service Class Doc Comment
  *
  * @category Class
  * @description Csomaghoz tartozó postai szolgáltatások.   /   Postal services included with the parcel.
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

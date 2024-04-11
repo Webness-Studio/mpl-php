@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model\Model
+ * @package  WebnessStudio\MPL\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,12 +26,12 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package WebnessStudio/MPL/Model\Model
+ * @package WebnessStudio\MPL\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

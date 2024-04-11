@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * LabelQueryResult Class Doc Comment
  *
  * @category Class
  * @description Csomag(ok) címiratának lekérésének eredménye
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,8 +59,8 @@ class LabelQueryResult implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'tracking_number' => 'string',
         'label' => 'string',
-        'errors' => '\WebnessStudio/MPL/Model\Model\ErrorDescriptor[]',
-        'warnings' => '\WebnessStudio/MPL/Model\Model\WarningDescriptor[]'
+        'errors' => '\WebnessStudio\MPL\Model\ErrorDescriptor[]',
+        'warnings' => '\WebnessStudio\MPL\Model\WarningDescriptor[]'
     ];
 
     /**
@@ -271,7 +271,7 @@ class LabelQueryResult implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \WebnessStudio/MPL/Model\Model\ErrorDescriptor[]
+     * @return \WebnessStudio\MPL\Model\ErrorDescriptor[]
      */
     public function getErrors()
     {
@@ -281,7 +281,7 @@ class LabelQueryResult implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \WebnessStudio/MPL/Model\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.
+     * @param \WebnessStudio\MPL\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class LabelQueryResult implements ModelInterface, ArrayAccess
     /**
      * Gets warnings
      *
-     * @return \WebnessStudio/MPL/Model\Model\WarningDescriptor[]
+     * @return \WebnessStudio\MPL\Model\WarningDescriptor[]
      */
     public function getWarnings()
     {
@@ -305,7 +305,7 @@ class LabelQueryResult implements ModelInterface, ArrayAccess
     /**
      * Sets warnings
      *
-     * @param \WebnessStudio/MPL/Model\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.
+     * @param \WebnessStudio\MPL\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.
      *
      * @return $this
      */

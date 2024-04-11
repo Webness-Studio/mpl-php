@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * DeliveryPlaceRequest Class Doc Comment
  *
  * @category Class
  * @description Fixponti kézbesítési helyek lekérdezés kérés. Üres tömb beküldése esetén az összes fixpontunkat megkaphatja egyetlen lekérdezéssel.\\  Háznál kézbesítésen (HA) kívül háromféle másik, úgynevezett fixponti kézbesítési mód támogatott: PostaPont(PP), Postán maradó(PM), Csomagautomata(CS).\\  Fixponti kézbesítés választása esetén a folyamatban később, a csomag adatainak beküldésekor két adatra lesz szükség: a fixponti hely pontos neve (string), illetve a kézbesítési mód kódja (PP, PM, CS).\\   / \\  Request for the query of places of fixed point delivery. In case of sending in an empty array, you may receive all of our fixed point by one query.\\  Besides home delivery(HD), three other so-called fixed point delivery methods are supported: Postal Point(PP), Poste Restante(PR), Parcel Terminal(PT).\\  In case of choosing fixed point delivery, two pieces of information shall be provided later in the process, when sending in the data of the mail item: the correct name of the place of fixed point (string) and the code of the delivery method (PP, PR, PT).
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class DeliveryPlaceRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'deliveryplaces_query' => '\WebnessStudio/MPL/Model\Model\DeliveryPlacesQuery',
+        'deliveryplaces_query' => '\WebnessStudio\MPL\Model\DeliveryPlacesQuery',
         'service_point_type' => 'string[]'
     ];
 
@@ -227,7 +227,7 @@ class DeliveryPlaceRequest implements ModelInterface, ArrayAccess
     /**
      * Gets deliveryplaces_query
      *
-     * @return \WebnessStudio/MPL/Model\Model\DeliveryPlacesQuery
+     * @return \WebnessStudio\MPL\Model\DeliveryPlacesQuery
      */
     public function getDeliveryplacesQuery()
     {
@@ -237,7 +237,7 @@ class DeliveryPlaceRequest implements ModelInterface, ArrayAccess
     /**
      * Sets deliveryplaces_query
      *
-     * @param \WebnessStudio/MPL/Model\Model\DeliveryPlacesQuery $deliveryplaces_query deliveryplaces_query
+     * @param \WebnessStudio\MPL\Model\DeliveryPlacesQuery $deliveryplaces_query deliveryplaces_query
      *
      * @return $this
      */

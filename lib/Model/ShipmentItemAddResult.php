@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * ShipmentItemAddResult Class Doc Comment
  *
  * @category Class
  * @description Szállítmány csomag hozzáadás eredménye   /   Result of adding a consignment parcel
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,8 +61,8 @@ class ShipmentItemAddResult implements ModelInterface, ArrayAccess
         'replacement_tracking_number' => 'string',
         'package_tracking_numbers' => 'string[]',
         'label' => 'string',
-        'errors' => '\WebnessStudio/MPL/Model\Model\ErrorDescriptor[]',
-        'warnings' => '\WebnessStudio/MPL/Model\Model\WarningDescriptor[]'
+        'errors' => '\WebnessStudio\MPL\Model\ErrorDescriptor[]',
+        'warnings' => '\WebnessStudio\MPL\Model\WarningDescriptor[]'
     ];
 
     /**
@@ -331,7 +331,7 @@ class ShipmentItemAddResult implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \WebnessStudio/MPL/Model\Model\ErrorDescriptor[]
+     * @return \WebnessStudio\MPL\Model\ErrorDescriptor[]
      */
     public function getErrors()
     {
@@ -341,7 +341,7 @@ class ShipmentItemAddResult implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \WebnessStudio/MPL/Model\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
+     * @param \WebnessStudio\MPL\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class ShipmentItemAddResult implements ModelInterface, ArrayAccess
     /**
      * Gets warnings
      *
-     * @return \WebnessStudio/MPL/Model\Model\WarningDescriptor[]
+     * @return \WebnessStudio\MPL\Model\WarningDescriptor[]
      */
     public function getWarnings()
     {
@@ -365,7 +365,7 @@ class ShipmentItemAddResult implements ModelInterface, ArrayAccess
     /**
      * Sets warnings
      *
-     * @param \WebnessStudio/MPL/Model\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.   /   Deficiencies detected during the execution of the request. If the list contains an item, the request was completed successfully.
+     * @param \WebnessStudio\MPL\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.   /   Deficiencies detected during the execution of the request. If the list contains an item, the request was completed successfully.
      *
      * @return $this
      */

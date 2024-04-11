@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * ApiGatewayErrorResponseFault Class Doc Comment
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class ApiGatewayErrorResponseFault implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'faultstring' => 'string',
-        'detail' => '\WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponseFaultDetail'
+        'detail' => '\WebnessStudio\MPL\Model\ApiGatewayErrorResponseFaultDetail'
     ];
 
     /**
@@ -234,7 +234,7 @@ class ApiGatewayErrorResponseFault implements ModelInterface, ArrayAccess
     /**
      * Gets detail
      *
-     * @return \WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponseFaultDetail
+     * @return \WebnessStudio\MPL\Model\ApiGatewayErrorResponseFaultDetail
      */
     public function getDetail()
     {
@@ -244,7 +244,7 @@ class ApiGatewayErrorResponseFault implements ModelInterface, ArrayAccess
     /**
      * Sets detail
      *
-     * @param \WebnessStudio/MPL/Model\Model\ApiGatewayErrorResponseFaultDetail $detail detail
+     * @param \WebnessStudio\MPL\Model\ApiGatewayErrorResponseFaultDetail $detail detail
      *
      * @return $this
      */

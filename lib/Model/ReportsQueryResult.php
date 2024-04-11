@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * ReportsQueryResult Class Doc Comment
  *
  * @category Class
  * @description Riport futtatás eredménye   /   Report running result
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class ReportsQueryResult implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'report' => 'string',
-        'errors' => '\WebnessStudio/MPL/Model\Model\ErrorDescriptor[]'
+        'errors' => '\WebnessStudio\MPL\Model\ErrorDescriptor[]'
     ];
 
     /**
@@ -235,7 +235,7 @@ class ReportsQueryResult implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \WebnessStudio/MPL/Model\Model\ErrorDescriptor[]
+     * @return \WebnessStudio\MPL\Model\ErrorDescriptor[]
      */
     public function getErrors()
     {
@@ -245,7 +245,7 @@ class ReportsQueryResult implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \WebnessStudio/MPL/Model\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
+     * @param \WebnessStudio\MPL\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
      *
      * @return $this
      */

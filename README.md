@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/git_user_id/git_repo_id.git"
+      "url": "https://github.com/webness-studio/mpl-php.git"
     }
   ],
   "require": {
-    "git_user_id/git_repo_id": "*@dev"
+    "webness-studio/mpl-php": "*@dev"
   }
 }
 ```
@@ -56,13 +56,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure HTTP basic authorization: basic_auth
-$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
+$config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new WebnessStudio/MPL/Model\Api\AddressApi(
+$apiInstance = new WebnessStudio\MPL\Api\AddressApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,7 +70,7 @@ $apiInstance = new WebnessStudio/MPL/Model\Api\AddressApi(
 );
 $x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
 $x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$body = new \WebnessStudio/MPL/Model\Model\ZipCodeQueryRequest(); // \WebnessStudio/MPL/Model\Model\ZipCodeQueryRequest | 
+$body = new \WebnessStudio\MPL\Model\ZipCodeQueryRequest(); // \WebnessStudio\MPL\Model\ZipCodeQueryRequest | 
 $x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
 
 try {
@@ -80,13 +80,13 @@ try {
     echo 'Exception when calling AddressApi->addressesCityToZipCodePost: ', $e->getMessage(), PHP_EOL;
 }
 // Configure HTTP basic authorization: basic_auth
-$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()
+$config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
     ->setPassword('YOUR_PASSWORD');
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
-$config = WebnessStudio/MPL/Model\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new WebnessStudio/MPL/Model\Api\AddressApi(
+$apiInstance = new WebnessStudio\MPL\Api\AddressApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -94,7 +94,7 @@ $apiInstance = new WebnessStudio/MPL/Model\Api\AddressApi(
 );
 $x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
 $x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$body = new \WebnessStudio/MPL/Model\Model\CityCodeQueryRequest(); // \WebnessStudio/MPL/Model\Model\CityCodeQueryRequest | 
+$body = new \WebnessStudio\MPL\Model\CityCodeQueryRequest(); // \WebnessStudio\MPL\Model\CityCodeQueryRequest | 
 $x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
 
 try {

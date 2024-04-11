@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * ShipmentCreateResult Class Doc Comment
  *
  * @category Class
  * @description Szállítmány létrehozás eredménye   /   Result of consignment creation
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,15 +60,15 @@ class ShipmentCreateResult implements ModelInterface, ArrayAccess
         'webshop_id' => 'string',
         'tracking_number' => 'string',
         'replacement_tracking_number' => 'string',
-        'replacement_labels' => '\WebnessStudio/MPL/Model\Model\ReplacementLabel[]',
+        'replacement_labels' => '\WebnessStudio\MPL\Model\ReplacementLabel[]',
         'package_tracking_numbers' => 'string[]',
         'dispatch_id' => 'int',
         'suggested_recipient_post_code' => 'string',
         'suggested_recipient_city' => 'string',
         'suggested_recipient_address' => 'string',
         'label' => 'string',
-        'errors' => '\WebnessStudio/MPL/Model\Model\ErrorDescriptor[]',
-        'warnings' => '\WebnessStudio/MPL/Model\Model\WarningDescriptor[]'
+        'errors' => '\WebnessStudio\MPL\Model\ErrorDescriptor[]',
+        'warnings' => '\WebnessStudio\MPL\Model\WarningDescriptor[]'
     ];
 
     /**
@@ -343,7 +343,7 @@ class ShipmentCreateResult implements ModelInterface, ArrayAccess
     /**
      * Gets replacement_labels
      *
-     * @return \WebnessStudio/MPL/Model\Model\ReplacementLabel[]
+     * @return \WebnessStudio\MPL\Model\ReplacementLabel[]
      */
     public function getReplacementLabels()
     {
@@ -353,7 +353,7 @@ class ShipmentCreateResult implements ModelInterface, ArrayAccess
     /**
      * Sets replacement_labels
      *
-     * @param \WebnessStudio/MPL/Model\Model\ReplacementLabel[] $replacement_labels Amennyiben cserecsomag szolgáltatást vett igénybe, úgy az inverz csomag(ok) címiratai.   /   If you used a replacement parcel service, the address labels of the inverse parcel(s).
+     * @param \WebnessStudio\MPL\Model\ReplacementLabel[] $replacement_labels Amennyiben cserecsomag szolgáltatást vett igénybe, úgy az inverz csomag(ok) címiratai.   /   If you used a replacement parcel service, the address labels of the inverse parcel(s).
      *
      * @return $this
      */
@@ -511,7 +511,7 @@ class ShipmentCreateResult implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return \WebnessStudio/MPL/Model\Model\ErrorDescriptor[]
+     * @return \WebnessStudio\MPL\Model\ErrorDescriptor[]
      */
     public function getErrors()
     {
@@ -521,7 +521,7 @@ class ShipmentCreateResult implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param \WebnessStudio/MPL/Model\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
+     * @param \WebnessStudio\MPL\Model\ErrorDescriptor[] $errors A kérés végrehajtása során észlelt hibák. Amennyiben van hibalista, úgy az adott kérés sikertelenül zárult.   /   Errors detected during request execution. If there is an error list, the request was unsuccessful.
      *
      * @return $this
      */
@@ -535,7 +535,7 @@ class ShipmentCreateResult implements ModelInterface, ArrayAccess
     /**
      * Gets warnings
      *
-     * @return \WebnessStudio/MPL/Model\Model\WarningDescriptor[]
+     * @return \WebnessStudio\MPL\Model\WarningDescriptor[]
      */
     public function getWarnings()
     {
@@ -545,7 +545,7 @@ class ShipmentCreateResult implements ModelInterface, ArrayAccess
     /**
      * Sets warnings
      *
-     * @param \WebnessStudio/MPL/Model\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.   /   Deficiencies detected during the execution of the request. If the list contains an item, the request was completed successfully.
+     * @param \WebnessStudio\MPL\Model\WarningDescriptor[] $warnings A kérés végrehajtása során észlelt hiányosságok. Amennyiben a lista tartalmaz elemet, úgy az adott kérés sikeresen zárult.   /   Deficiencies detected during the execution of the request. If the list contains an item, the request was completed successfully.
      *
      * @return $this
      */

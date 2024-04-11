@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * Shipment Class Doc Comment
  *
  * @category Class
  * @description Szállítmány.   /   Consignment
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,15 +57,15 @@ class Shipment implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sender' => '\WebnessStudio/MPL/Model\Model\Sender',
-        'non_utf8_sender' => '\WebnessStudio/MPL/Model\Model\NonUTF8Sender',
+        'sender' => '\WebnessStudio\MPL\Model\Sender',
+        'non_utf8_sender' => '\WebnessStudio\MPL\Model\NonUTF8Sender',
         'shipment_date' => '\DateTime',
         'order_id' => 'string',
         'tag' => 'string',
         'tracking_number' => 'string',
-        'item' => '\WebnessStudio/MPL/Model\Model\ShipmentItem[]',
-        'recipient' => '\WebnessStudio/MPL/Model\Model\Recipient',
-        'non_utf8_recipient' => '\WebnessStudio/MPL/Model\Model\NonUTF8Recipient',
+        'item' => '\WebnessStudio\MPL\Model\ShipmentItem[]',
+        'recipient' => '\WebnessStudio\MPL\Model\Recipient',
+        'non_utf8_recipient' => '\WebnessStudio\MPL\Model\NonUTF8Recipient',
         'payment_mode' => 'string',
         'package_retention' => 'int'
     ];
@@ -287,7 +287,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets sender
      *
-     * @return \WebnessStudio/MPL/Model\Model\Sender
+     * @return \WebnessStudio\MPL\Model\Sender
      */
     public function getSender()
     {
@@ -297,7 +297,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets sender
      *
-     * @param \WebnessStudio/MPL/Model\Model\Sender $sender sender
+     * @param \WebnessStudio\MPL\Model\Sender $sender sender
      *
      * @return $this
      */
@@ -311,7 +311,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets non_utf8_sender
      *
-     * @return \WebnessStudio/MPL/Model\Model\NonUTF8Sender
+     * @return \WebnessStudio\MPL\Model\NonUTF8Sender
      */
     public function getNonUtf8Sender()
     {
@@ -321,7 +321,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets non_utf8_sender
      *
-     * @param \WebnessStudio/MPL/Model\Model\NonUTF8Sender $non_utf8_sender non_utf8_sender
+     * @param \WebnessStudio\MPL\Model\NonUTF8Sender $non_utf8_sender non_utf8_sender
      *
      * @return $this
      */
@@ -431,7 +431,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets item
      *
-     * @return \WebnessStudio/MPL/Model\Model\ShipmentItem[]
+     * @return \WebnessStudio\MPL\Model\ShipmentItem[]
      */
     public function getItem()
     {
@@ -441,7 +441,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets item
      *
-     * @param \WebnessStudio/MPL/Model\Model\ShipmentItem[] $item A szállítmányban szereplő csomagok felsorolása.   /   List of parcels included in the consignment.
+     * @param \WebnessStudio\MPL\Model\ShipmentItem[] $item A szállítmányban szereplő csomagok felsorolása.   /   List of parcels included in the consignment.
      *
      * @return $this
      */
@@ -455,7 +455,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets recipient
      *
-     * @return \WebnessStudio/MPL/Model\Model\Recipient
+     * @return \WebnessStudio\MPL\Model\Recipient
      */
     public function getRecipient()
     {
@@ -465,7 +465,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets recipient
      *
-     * @param \WebnessStudio/MPL/Model\Model\Recipient $recipient recipient
+     * @param \WebnessStudio\MPL\Model\Recipient $recipient recipient
      *
      * @return $this
      */
@@ -479,7 +479,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Gets non_utf8_recipient
      *
-     * @return \WebnessStudio/MPL/Model\Model\NonUTF8Recipient
+     * @return \WebnessStudio\MPL\Model\NonUTF8Recipient
      */
     public function getNonUtf8Recipient()
     {
@@ -489,7 +489,7 @@ class Shipment implements ModelInterface, ArrayAccess
     /**
      * Sets non_utf8_recipient
      *
-     * @param \WebnessStudio/MPL/Model\Model\NonUTF8Recipient $non_utf8_recipient non_utf8_recipient
+     * @param \WebnessStudio\MPL\Model\NonUTF8Recipient $non_utf8_recipient non_utf8_recipient
      *
      * @return $this
      */

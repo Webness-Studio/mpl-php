@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * ReplacementPackage Class Doc Comment
  *
  * @category Class
  * @description Cserecsomag adatai. Cserecsomag többletszolgáltatás használata esetén küldeni kell az item.replacementPackage részt is. Az alapcsomag részében a K_CSE szolgáltatást, míg a hozzá kapcsolódó inverz csomagnál (item.replacementPackage) a K_CSA szolgáltatást kell megadni. Fontos! Az alábbi listában látható további többletszolgáltatások közül a replacementPackage alatt csak ezek adhatók meg: K_TER, T_TOR   /   Data of replacement package. In case of using the additional service of replacement package, the item.replacementPackage part shall be sent as well. In the basic package part the K_CSE service, while in the case of the Inverz package related to it(item.replacementPackage) the K_CSA service must be provided. Important! Of the additional services listed below, only the following can be provided under replacementPackage: K_TER, T_TOR
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class ReplacementPackage implements ModelInterface, ArrayAccess
         'custom_data1' => 'string',
         'custom_data2' => 'string',
         'extra' => 'string[]',
-        'weight' => '\WebnessStudio/MPL/Model\Model\UnitValue',
+        'weight' => '\WebnessStudio\MPL\Model\UnitValue',
         'value' => 'int'
     ];
 
@@ -422,7 +422,7 @@ class ReplacementPackage implements ModelInterface, ArrayAccess
     /**
      * Gets weight
      *
-     * @return \WebnessStudio/MPL/Model\Model\UnitValue
+     * @return \WebnessStudio\MPL\Model\UnitValue
      */
     public function getWeight()
     {
@@ -432,7 +432,7 @@ class ReplacementPackage implements ModelInterface, ArrayAccess
     /**
      * Sets weight
      *
-     * @param \WebnessStudio/MPL/Model\Model\UnitValue $weight weight
+     * @param \WebnessStudio\MPL\Model\UnitValue $weight weight
      *
      * @return $this
      */

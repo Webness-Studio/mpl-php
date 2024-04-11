@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * Item Class Doc Comment
  *
  * @category Class
  * @description Az egyes csomagok adatai.   /   Details of each parcel.
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,14 +59,14 @@ class Item implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'custom_data1' => 'string',
         'custom_data2' => 'string',
-        'weight' => '\WebnessStudio/MPL/Model\Model\UnitValue',
+        'weight' => '\WebnessStudio\MPL\Model\UnitValue',
         'size' => 'string',
-        'services' => '\WebnessStudio/MPL/Model\Model\Service',
+        'services' => '\WebnessStudio\MPL\Model\Service',
         'ewc_code' => 'string',
         'qr_code' => 'string',
-        'replacement_package' => '\WebnessStudio/MPL/Model\Model\ReplacementPackage',
-        'customs' => '\WebnessStudio/MPL/Model\Model\Custom[]',
-        'documents' => '\WebnessStudio/MPL/Model\Model\Document[]'
+        'replacement_package' => '\WebnessStudio\MPL\Model\ReplacementPackage',
+        'customs' => '\WebnessStudio\MPL\Model\Custom[]',
+        'documents' => '\WebnessStudio\MPL\Model\Document[]'
     ];
 
     /**
@@ -338,7 +338,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets weight
      *
-     * @return \WebnessStudio/MPL/Model\Model\UnitValue
+     * @return \WebnessStudio\MPL\Model\UnitValue
      */
     public function getWeight()
     {
@@ -348,7 +348,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets weight
      *
-     * @param \WebnessStudio/MPL/Model\Model\UnitValue $weight weight
+     * @param \WebnessStudio\MPL\Model\UnitValue $weight weight
      *
      * @return $this
      */
@@ -395,7 +395,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets services
      *
-     * @return \WebnessStudio/MPL/Model\Model\Service
+     * @return \WebnessStudio\MPL\Model\Service
      */
     public function getServices()
     {
@@ -405,7 +405,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets services
      *
-     * @param \WebnessStudio/MPL/Model\Model\Service $services services
+     * @param \WebnessStudio\MPL\Model\Service $services services
      *
      * @return $this
      */
@@ -467,7 +467,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets replacement_package
      *
-     * @return \WebnessStudio/MPL/Model\Model\ReplacementPackage
+     * @return \WebnessStudio\MPL\Model\ReplacementPackage
      */
     public function getReplacementPackage()
     {
@@ -477,7 +477,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets replacement_package
      *
-     * @param \WebnessStudio/MPL/Model\Model\ReplacementPackage $replacement_package replacement_package
+     * @param \WebnessStudio\MPL\Model\ReplacementPackage $replacement_package replacement_package
      *
      * @return $this
      */
@@ -491,7 +491,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets customs
      *
-     * @return \WebnessStudio/MPL/Model\Model\Custom[]
+     * @return \WebnessStudio\MPL\Model\Custom[]
      */
     public function getCustoms()
     {
@@ -501,7 +501,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets customs
      *
-     * @param \WebnessStudio/MPL/Model\Model\Custom[] $customs ►INT◄ Árutartalom listája
+     * @param \WebnessStudio\MPL\Model\Custom[] $customs ►INT◄ Árutartalom listája
      *
      * @return $this
      */
@@ -515,7 +515,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Gets documents
      *
-     * @return \WebnessStudio/MPL/Model\Model\Document[]
+     * @return \WebnessStudio\MPL\Model\Document[]
      */
     public function getDocuments()
     {
@@ -525,7 +525,7 @@ class Item implements ModelInterface, ArrayAccess
     /**
      * Sets documents
      *
-     * @param \WebnessStudio/MPL/Model\Model\Document[] $documents ►INT◄ Dokumentumok listája
+     * @param \WebnessStudio\MPL\Model\Document[] $documents ►INT◄ Dokumentumok listája
      *
      * @return $this
      */

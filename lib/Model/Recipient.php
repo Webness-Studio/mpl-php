@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace WebnessStudio/MPL/Model\Model;
+namespace WebnessStudio\MPL\Model;
 
 use \ArrayAccess;
-use \WebnessStudio/MPL/Model\ObjectSerializer;
+use \WebnessStudio\MPL\ObjectSerializer;
 
 /**
  * Recipient Class Doc Comment
  *
  * @category Class
  * @description A címzett adatai.&lt;br /&gt;  A címzett címe (recipient.address.postCode/city/address) mindig a valós címet kell, hogy tartalmazza, kézbesítési módtól függetlenül.  Ha PM, PP, CS a kézbesítési mód, akkor a \&quot;parcelPickupSite\&quot; mezőbe a kiválasztott átvételi pont nevét kell beírni, és meg kell adni a vásárló valós címét.   /   Data of the recipient.  The recipient&#x27;s address (recipient.address.postCode/city/address) must always contain the valid address, regardless of the delivery method.   If the delivery method is PM, PP or CS, then the name of the selected collection point must be entered in the ‘parcelPickupSite’ field and the valid address of the customer must be entered.
- * @package  WebnessStudio/MPL/Model
+ * @package  WebnessStudio\MPL
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class Recipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'contact' => '\WebnessStudio/MPL/Model\Model\Contact',
-        'address' => '\WebnessStudio/MPL/Model\Model\DeliveryAddress',
+        'contact' => '\WebnessStudio\MPL\Model\Contact',
+        'address' => '\WebnessStudio\MPL\Model\DeliveryAddress',
         'lua_code' => 'string',
         'disabled' => 'bool'
     ];
@@ -229,7 +229,7 @@ class Recipient implements ModelInterface, ArrayAccess
     /**
      * Gets contact
      *
-     * @return \WebnessStudio/MPL/Model\Model\Contact
+     * @return \WebnessStudio\MPL\Model\Contact
      */
     public function getContact()
     {
@@ -239,7 +239,7 @@ class Recipient implements ModelInterface, ArrayAccess
     /**
      * Sets contact
      *
-     * @param \WebnessStudio/MPL/Model\Model\Contact $contact contact
+     * @param \WebnessStudio\MPL\Model\Contact $contact contact
      *
      * @return $this
      */
@@ -253,7 +253,7 @@ class Recipient implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \WebnessStudio/MPL/Model\Model\DeliveryAddress
+     * @return \WebnessStudio\MPL\Model\DeliveryAddress
      */
     public function getAddress()
     {
@@ -263,7 +263,7 @@ class Recipient implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \WebnessStudio/MPL/Model\Model\DeliveryAddress $address address
+     * @param \WebnessStudio\MPL\Model\DeliveryAddress $address address
      *
      * @return $this
      */
