@@ -1,26 +1,33 @@
 # WebnessStudio\MPL\ShipmentApi
 
-All URIs are relative to *https://sandbox.api.posta.hu/v2/mplapi*
+All URIs are relative to https://sandbox.api.posta.hu/v2/mplapi, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**shipmentsClosePost**](ShipmentApi.md#shipmentsclosepost) | **POST** /shipments/close | Jegyzékzárási kérés. Egyazon beszállítással feladni kívánt csomagok halmazának zárása, továbbá a zárásról egy szállítólevél igénylése. A lezárandó szállítmányokban alkalmazott feladói adatok (megállapodás, feladói név, feladói cím, bankszámla), illetve az irány (inverz?) függvényében a válaszunk akár több objektumot is tartalmazhat.   /   Request for closing the list. Closing a set of mail items to be dispatched with the same transport, and requesting a delivery note on the closing of the list. Depending on the data (agreement, sender’s name, sender’s address, bank account) and direction (inverse?) used in the shipments to be closed, our response may contain several objects.
-[**shipmentsGet**](ShipmentApi.md#shipmentsget) | **GET** /shipments | Visszaadja, hogy az adott ügyfél milyen csomagjairól mit tud opcionálisan csak a megadott időpontok között és megadott darabszámig.   /   Indicates what is known about what parcels of the given customer, optionally, only between the specified times and up to the specified number of parcels.
-[**shipmentsLabelGet**](ShipmentApi.md#shipmentslabelget) | **GET** /shipments/label | Csomag(ok) címiratának lekérése.    /   Query address label of parcel(s)
-[**shipmentsPost**](ShipmentApi.md#shipmentspost) | **POST** /shipments | Csomagadat(ok) beküldése.   /   Submission of parcel data.
-[**shipmentsTrackingNumberDelete**](ShipmentApi.md#shipmentstrackingnumberdelete) | **DELETE** /shipments/{trackingNumber} | Ragszám szerinti tétel törlése.   /   Deletion of item by tracking number.
-[**shipmentsTrackingNumberGet**](ShipmentApi.md#shipmentstrackingnumberget) | **GET** /shipments/{trackingNumber} | Ragszám szerinti feladandó tétel lekérdezése.   /   Querying of item to be sent through tracking number.
-[**shipmentsTrackingNumberItemPost**](ShipmentApi.md#shipmentstrackingnumberitempost) | **POST** /shipments/{trackingNumber}/item | Új csomag(ok) felvétele meglevő nem együtt kézbesítendő szállítmányba.   /   Adding of new parcel(s) to an existing separately deliverable consignment.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**shipmentsClosePost()**](ShipmentApi.md#shipmentsClosePost) | **POST** /shipments/close | Jegyzékzárási kérés. Egyazon beszállítással feladni kívánt csomagok halmazának zárása, továbbá a zárásról egy szállítólevél igénylése. A lezárandó szállítmányokban alkalmazott feladói adatok (megállapodás, feladói név, feladói cím, bankszámla), illetve az irány (inverz?) függvényében a válaszunk akár több objektumot is tartalmazhat.   /   Request for closing the list. Closing a set of mail items to be dispatched with the same transport, and requesting a delivery note on the closing of the list. Depending on the data (agreement, sender’s name, sender’s address, bank account) and direction (inverse?) used in the shipments to be closed, our response may contain several objects. |
+| [**shipmentsGet()**](ShipmentApi.md#shipmentsGet) | **GET** /shipments | Visszaadja, hogy az adott ügyfél milyen csomagjairól mit tud opcionálisan csak a megadott időpontok között és megadott darabszámig.   /   Indicates what is known about what parcels of the given customer, optionally, only between the specified times and up to the specified number of parcels. |
+| [**shipmentsLabelGet()**](ShipmentApi.md#shipmentsLabelGet) | **GET** /shipments/label | Csomag(ok) címiratának lekérése.    /   Query address label of parcel(s) |
+| [**shipmentsPost()**](ShipmentApi.md#shipmentsPost) | **POST** /shipments | Csomagadat(ok) beküldése.   /   Submission of parcel data. |
+| [**shipmentsTrackingNumberDelete()**](ShipmentApi.md#shipmentsTrackingNumberDelete) | **DELETE** /shipments/{trackingNumber} | Ragszám szerinti tétel törlése.   /   Deletion of item by tracking number. |
+| [**shipmentsTrackingNumberGet()**](ShipmentApi.md#shipmentsTrackingNumberGet) | **GET** /shipments/{trackingNumber} | Ragszám szerinti feladandó tétel lekérdezése.   /   Querying of item to be sent through tracking number. |
+| [**shipmentsTrackingNumberItemPost()**](ShipmentApi.md#shipmentsTrackingNumberItemPost) | **POST** /shipments/{trackingNumber}/item | Új csomag(ok) felvétele meglevő nem együtt kézbesítendő szállítmányba.   /   Adding of new parcel(s) to an existing separately deliverable consignment. |
 
-# **shipmentsClosePost**
-> \WebnessStudio\MPL\Model\ShipmentCloseResult[] shipmentsClosePost($x_request_id, $x_accounting_code, $body, $x_correlation_id)
+
+## `shipmentsClosePost()`
+
+```php
+shipmentsClosePost($x_request_id, $x_accounting_code, $x_correlation_id, $shipment_close_request): \WebnessStudio\MPL\Model\ShipmentCloseResult[]
+```
 
 Jegyzékzárási kérés. Egyazon beszállítással feladni kívánt csomagok halmazának zárása, továbbá a zárásról egy szállítólevél igénylése. A lezárandó szállítmányokban alkalmazott feladói adatok (megállapodás, feladói név, feladói cím, bankszámla), illetve az irány (inverz?) függvényében a válaszunk akár több objektumot is tartalmazhat.   /   Request for closing the list. Closing a set of mail items to be dispatched with the same transport, and requesting a delivery note on the closing of the list. Depending on the data (agreement, sender’s name, sender’s address, bank account) and direction (inverse?) used in the shipments to be closed, our response may contain several objects.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basic_auth
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -29,34 +36,34 @@ $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
+
 $apiInstance = new WebnessStudio\MPL\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
-$x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$body = new \WebnessStudio\MPL\Model\ShipmentCloseRequest(); // \WebnessStudio\MPL\Model\ShipmentCloseRequest | 
-$x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$x_request_id = 'x_request_id_example'; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
+$x_accounting_code = 'x_accounting_code_example'; // string | Vevőkód   /   The accounting code
+$x_correlation_id = 'x_correlation_id_example'; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$shipment_close_request = new \WebnessStudio\MPL\Model\ShipmentCloseRequest(); // \WebnessStudio\MPL\Model\ShipmentCloseRequest | 
 
 try {
-    $result = $apiInstance->shipmentsClosePost($x_request_id, $x_accounting_code, $body, $x_correlation_id);
+    $result = $apiInstance->shipmentsClosePost($x_request_id, $x_accounting_code, $x_correlation_id, $shipment_close_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentApi->shipmentsClosePost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
- **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **body** | [**\WebnessStudio\MPL\Model\ShipmentCloseRequest**](../Model/ShipmentCloseRequest.md)|  | [optional]
- **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_id** | **string**| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) | |
+| **x_accounting_code** | **string**| Vevőkód   /   The accounting code | |
+| **x_correlation_id** | **string**| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional] |
+| **shipment_close_request** | [**\WebnessStudio\MPL\Model\ShipmentCloseRequest**](../Model/ShipmentCloseRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -68,20 +75,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: application/json
+- **Content-Type**: `application/json`, `text/json`, `application/*+json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **shipmentsGet**
-> \WebnessStudio\MPL\Model\ShipmentQueryResult[] shipmentsGet($x_request_id, $x_accounting_code, $x_correlation_id, $from_date, $to_date, $tracking_numbers, $tag)
+## `shipmentsGet()`
+
+```php
+shipmentsGet($x_request_id, $x_accounting_code, $x_correlation_id, $from_date, $to_date, $tracking_numbers, $tag): \WebnessStudio\MPL\Model\ShipmentQueryResult[]
+```
 
 Visszaadja, hogy az adott ügyfél milyen csomagjairól mit tud opcionálisan csak a megadott időpontok között és megadott darabszámig.   /   Indicates what is known about what parcels of the given customer, optionally, only between the specified times and up to the specified number of parcels.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basic_auth
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -90,19 +105,20 @@ $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
+
 $apiInstance = new WebnessStudio\MPL\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
-$x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
-$from_date = new \DateTime("2013-10-20"); // \DateTime | Mettől szűrjön a lekérdezés.   /   Filter the query from.
-$to_date = new \DateTime("2013-10-20"); // \DateTime | Meddig szűrjön a lekérdezés.   /   Filter the query to.
-$tracking_numbers = array("tracking_numbers_example"); // string[] | A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs
-$tag = "tag_example"; // string | Küldemény cimkéje   /   Mail item label
+$x_request_id = 'x_request_id_example'; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
+$x_accounting_code = 'x_accounting_code_example'; // string | Vevőkód   /   The accounting code
+$x_correlation_id = 'x_correlation_id_example'; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$from_date = 2020.01.05.; // \DateTime | Mettől szűrjön a lekérdezés.   /   Filter the query from.
+$to_date = 2020.01.10.; // \DateTime | Meddig szűrjön a lekérdezés.   /   Filter the query to.
+$tracking_numbers = array('tracking_numbers_example'); // string[] | A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs
+$tag = 1. telephely; // string | Küldemény cimkéje   /   Mail item label
 
 try {
     $result = $apiInstance->shipmentsGet($x_request_id, $x_accounting_code, $x_correlation_id, $from_date, $to_date, $tracking_numbers, $tag);
@@ -110,20 +126,19 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentApi->shipmentsGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
- **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
- **from_date** | **\DateTime**| Mettől szűrjön a lekérdezés.   /   Filter the query from. | [optional]
- **to_date** | **\DateTime**| Meddig szűrjön a lekérdezés.   /   Filter the query to. | [optional]
- **tracking_numbers** | [**string[]**](../Model/string.md)| A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs | [optional]
- **tag** | **string**| Küldemény cimkéje   /   Mail item label | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_id** | **string**| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) | |
+| **x_accounting_code** | **string**| Vevőkód   /   The accounting code | |
+| **x_correlation_id** | **string**| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional] |
+| **from_date** | **\DateTime**| Mettől szűrjön a lekérdezés.   /   Filter the query from. | [optional] |
+| **to_date** | **\DateTime**| Meddig szűrjön a lekérdezés.   /   Filter the query to. | [optional] |
+| **tracking_numbers** | [**string[]**](../Model/string.md)| A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs | [optional] |
+| **tag** | **string**| Küldemény cimkéje   /   Mail item label | [optional] |
 
 ### Return type
 
@@ -135,20 +150,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **shipmentsLabelGet**
-> \WebnessStudio\MPL\Model\LabelQueryResult[] shipmentsLabelGet($x_request_id, $x_accounting_code, $x_correlation_id, $tracking_numbers, $label_type, $label_format, $order_by, $single_file)
+## `shipmentsLabelGet()`
+
+```php
+shipmentsLabelGet($x_request_id, $x_accounting_code, $x_correlation_id, $tracking_numbers, $label_type, $label_format, $order_by, $single_file): \WebnessStudio\MPL\Model\LabelQueryResult[]
+```
 
 Csomag(ok) címiratának lekérése.    /   Query address label of parcel(s)
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basic_auth
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -157,19 +180,20 @@ $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
+
 $apiInstance = new WebnessStudio\MPL\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
-$x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
-$tracking_numbers = array("tracking_numbers_example"); // string[] | A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs (tracking numbers)
-$label_type = "label_type_example"; // string | A címirat formátuma   /   Address label format
-$label_format = "PDF"; // string | A generált címirat formátuma
-$order_by = "order_by_example"; // string | A címiratok sorrendje a PDF fájlon belül.   /   Order of the address labels in the PDF file.
+$x_request_id = 'x_request_id_example'; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
+$x_accounting_code = 'x_accounting_code_example'; // string | Vevőkód   /   The accounting code
+$x_correlation_id = 'x_correlation_id_example'; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$tracking_numbers = array('tracking_numbers_example'); // string[] | A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs (tracking numbers)
+$label_type = A5; // string | A címirat formátuma   /   Address label format
+$label_format = 'PDF'; // string | A generált címirat formátuma
+$order_by = 'order_by_example'; // string | A címiratok sorrendje a PDF fájlon belül.   /   Order of the address labels in the PDF file.
 $single_file = true; // bool | Az eredmény címiratok egyetlen PDF fájlban vagy külön PDF fájlokban készüljenek   /   Create address label results in a single PDF or in separate PDFs
 
 try {
@@ -178,21 +202,20 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentApi->shipmentsLabelGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
- **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
- **tracking_numbers** | [**string[]**](../Model/string.md)| A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs (tracking numbers) | [optional]
- **label_type** | **string**| A címirat formátuma   /   Address label format | [optional]
- **label_format** | **string**| A generált címirat formátuma | [optional] [default to PDF]
- **order_by** | **string**| A címiratok sorrendje a PDF fájlon belül.   /   Order of the address labels in the PDF file. | [optional]
- **single_file** | **bool**| Az eredmény címiratok egyetlen PDF fájlban vagy külön PDF fájlokban készüljenek   /   Create address label results in a single PDF or in separate PDFs | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_id** | **string**| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) | |
+| **x_accounting_code** | **string**| Vevőkód   /   The accounting code | |
+| **x_correlation_id** | **string**| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional] |
+| **tracking_numbers** | [**string[]**](../Model/string.md)| A kiválasztott postai azonosítók (ragszámok)   /   Selected postal IDs (tracking numbers) | [optional] |
+| **label_type** | **string**| A címirat formátuma   /   Address label format | [optional] |
+| **label_format** | **string**| A generált címirat formátuma | [optional] [default to &#39;PDF&#39;] |
+| **order_by** | **string**| A címiratok sorrendje a PDF fájlon belül.   /   Order of the address labels in the PDF file. | [optional] |
+| **single_file** | **bool**| Az eredmény címiratok egyetlen PDF fájlban vagy külön PDF fájlokban készüljenek   /   Create address label results in a single PDF or in separate PDFs | [optional] |
 
 ### Return type
 
@@ -204,22 +227,30 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **shipmentsPost**
-> \WebnessStudio\MPL\Model\ShipmentCreateResult[] shipmentsPost($x_request_id, $x_accounting_code, $body, $x_correlation_id)
+## `shipmentsPost()`
+
+```php
+shipmentsPost($x_request_id, $x_accounting_code, $x_correlation_id, $shipment_create_request): \WebnessStudio\MPL\Model\ShipmentCreateResult[]
+```
 
 Csomagadat(ok) beküldése.   /   Submission of parcel data.
 
 Egy hívásban legfeljebb 100 szállítmány adatai küldhetők be.              Szállítmányon belül a csomagok száma nincs korlátozva, de az egyszerre beküldött tételek számának növelésével a feldolgozási idő is növekedni fog.              A túl hosszú feldolgozási idő a hívó oldalon timeoutot eredményezhet, emiatt célszerű ezt tapasztalati úton megválasztani.\\               / \\              The data of up to 100 consignments can be submitted in one call. There is no limit to the number of parcels within a consignment, but with the increasing item submissions, the handling time will also increase. It the handling time is too long it may result in a timeout on the call page, therefore it is advisable to choose it based on experience.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basic_auth
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -228,34 +259,34 @@ $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
+
 $apiInstance = new WebnessStudio\MPL\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
-$x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$body = array(new \WebnessStudio\MPL\Model\ShipmentCreateRequest()); // \WebnessStudio\MPL\Model\ShipmentCreateRequest[] | Az új szállítmányok értékei JSON formátumban.
-$x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$x_request_id = 'x_request_id_example'; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
+$x_accounting_code = 'x_accounting_code_example'; // string | Vevőkód   /   The accounting code
+$x_correlation_id = 'x_correlation_id_example'; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$shipment_create_request = array(new \WebnessStudio\MPL\Model\ShipmentCreateRequest()); // \WebnessStudio\MPL\Model\ShipmentCreateRequest[] | Az új szállítmányok értékei JSON formátumban.
 
 try {
-    $result = $apiInstance->shipmentsPost($x_request_id, $x_accounting_code, $body, $x_correlation_id);
+    $result = $apiInstance->shipmentsPost($x_request_id, $x_accounting_code, $x_correlation_id, $shipment_create_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentApi->shipmentsPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
- **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **body** | [**\WebnessStudio\MPL\Model\ShipmentCreateRequest[]**](../Model/ShipmentCreateRequest.md)| Az új szállítmányok értékei JSON formátumban. | [optional]
- **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_id** | **string**| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) | |
+| **x_accounting_code** | **string**| Vevőkód   /   The accounting code | |
+| **x_correlation_id** | **string**| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional] |
+| **shipment_create_request** | [**\WebnessStudio\MPL\Model\ShipmentCreateRequest[]**](../Model/ShipmentCreateRequest.md)| Az új szállítmányok értékei JSON formátumban. | [optional] |
 
 ### Return type
 
@@ -267,20 +298,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: application/json
+- **Content-Type**: `application/json`, `text/json`, `application/*+json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **shipmentsTrackingNumberDelete**
-> \WebnessStudio\MPL\Model\ShipmentDeleteResult shipmentsTrackingNumberDelete($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id)
+## `shipmentsTrackingNumberDelete()`
+
+```php
+shipmentsTrackingNumberDelete($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id): \WebnessStudio\MPL\Model\ShipmentDeleteResult
+```
 
 Ragszám szerinti tétel törlése.   /   Deletion of item by tracking number.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basic_auth
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -289,16 +328,17 @@ $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
+
 $apiInstance = new WebnessStudio\MPL\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
-$x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$tracking_number = "tracking_number_example"; // string | Szállítmány azonosító   /   Postal ID
-$x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$x_request_id = 'x_request_id_example'; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
+$x_accounting_code = 'x_accounting_code_example'; // string | Vevőkód   /   The accounting code
+$tracking_number = 'tracking_number_example'; // string | Szállítmány azonosító   /   Postal ID
+$x_correlation_id = 'x_correlation_id_example'; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
 
 try {
     $result = $apiInstance->shipmentsTrackingNumberDelete($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id);
@@ -306,17 +346,16 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentApi->shipmentsTrackingNumberDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
- **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **tracking_number** | **string**| Szállítmány azonosító   /   Postal ID |
- **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_id** | **string**| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) | |
+| **x_accounting_code** | **string**| Vevőkód   /   The accounting code | |
+| **tracking_number** | **string**| Szállítmány azonosító   /   Postal ID | |
+| **x_correlation_id** | **string**| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional] |
 
 ### Return type
 
@@ -328,20 +367,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **shipmentsTrackingNumberGet**
-> \WebnessStudio\MPL\Model\ShipmentQueryResult shipmentsTrackingNumberGet($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id)
+## `shipmentsTrackingNumberGet()`
+
+```php
+shipmentsTrackingNumberGet($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id): \WebnessStudio\MPL\Model\ShipmentQueryResult
+```
 
 Ragszám szerinti feladandó tétel lekérdezése.   /   Querying of item to be sent through tracking number.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basic_auth
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -350,16 +397,17 @@ $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
+
 $apiInstance = new WebnessStudio\MPL\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
-$x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$tracking_number = "tracking_number_example"; // string | Szállítmány azonosító   /   Postal ID
-$x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$x_request_id = 'x_request_id_example'; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
+$x_accounting_code = 'x_accounting_code_example'; // string | Vevőkód   /   The accounting code
+$tracking_number = 'tracking_number_example'; // string | Szállítmány azonosító   /   Postal ID
+$x_correlation_id = 'x_correlation_id_example'; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
 
 try {
     $result = $apiInstance->shipmentsTrackingNumberGet($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id);
@@ -367,17 +415,16 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentApi->shipmentsTrackingNumberGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
- **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **tracking_number** | **string**| Szállítmány azonosító   /   Postal ID |
- **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_id** | **string**| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) | |
+| **x_accounting_code** | **string**| Vevőkód   /   The accounting code | |
+| **tracking_number** | **string**| Szállítmány azonosító   /   Postal ID | |
+| **x_correlation_id** | **string**| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional] |
 
 ### Return type
 
@@ -389,20 +436,28 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
-# **shipmentsTrackingNumberItemPost**
-> \WebnessStudio\MPL\Model\ShipmentItemAddResult[] shipmentsTrackingNumberItemPost($x_request_id, $x_accounting_code, $tracking_number, $body, $x_correlation_id)
+## `shipmentsTrackingNumberItemPost()`
+
+```php
+shipmentsTrackingNumberItemPost($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id, $shipment_item_add_request): \WebnessStudio\MPL\Model\ShipmentItemAddResult[]
+```
 
 Új csomag(ok) felvétele meglevő nem együtt kézbesítendő szállítmányba.   /   Adding of new parcel(s) to an existing separately deliverable consignment.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure HTTP basic authorization: basic_auth
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
@@ -411,36 +466,36 @@ $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()
 // Configure OAuth2 access token for authorization: oauth2_client_credentials
 $config = WebnessStudio\MPL\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
+
 $apiInstance = new WebnessStudio\MPL\Api\ShipmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
-$x_accounting_code = "x_accounting_code_example"; // string | Vevőkód   /   The accounting code
-$tracking_number = "tracking_number_example"; // string | 
-$body = new \WebnessStudio\MPL\Model\ShipmentItemAddRequest(); // \WebnessStudio\MPL\Model\ShipmentItemAddRequest | 
-$x_correlation_id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$x_request_id = 'x_request_id_example'; // string | A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format)
+$x_accounting_code = 'x_accounting_code_example'; // string | Vevőkód   /   The accounting code
+$tracking_number = 'tracking_number_example'; // string | 
+$x_correlation_id = 'x_correlation_id_example'; // string | Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format)
+$shipment_item_add_request = new \WebnessStudio\MPL\Model\ShipmentItemAddRequest(); // \WebnessStudio\MPL\Model\ShipmentItemAddRequest | 
 
 try {
-    $result = $apiInstance->shipmentsTrackingNumberItemPost($x_request_id, $x_accounting_code, $tracking_number, $body, $x_correlation_id);
+    $result = $apiInstance->shipmentsTrackingNumberItemPost($x_request_id, $x_accounting_code, $tracking_number, $x_correlation_id, $shipment_item_add_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ShipmentApi->shipmentsTrackingNumberItemPost: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **x_request_id** | [**string**](../Model/.md)| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) |
- **x_accounting_code** | **string**| Vevőkód   /   The accounting code |
- **tracking_number** | **string**|  |
- **body** | [**\WebnessStudio\MPL\Model\ShipmentItemAddRequest**](../Model/ShipmentItemAddRequest.md)|  | [optional]
- **x_correlation_id** | [**string**](../Model/.md)| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **x_request_id** | **string**| A kérés egyedi azonosítója (UUID formátumban)   /   The unique request ID (UUID format) | |
+| **x_accounting_code** | **string**| Vevőkód   /   The accounting code | |
+| **tracking_number** | **string**|  | |
+| **x_correlation_id** | **string**| Korrelációs azonosító (UUID formátumban)   /   The request correlation ID (UUID format) | [optional] |
+| **shipment_item_add_request** | [**\WebnessStudio\MPL\Model\ShipmentItemAddRequest**](../Model/ShipmentItemAddRequest.md)|  | [optional] |
 
 ### Return type
 
@@ -452,8 +507,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/_*+json
- - **Accept**: application/json
+- **Content-Type**: `application/json`, `text/json`, `application/*+json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
