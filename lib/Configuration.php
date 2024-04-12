@@ -474,6 +474,10 @@ class Configuration
             [
                 "url" => "https://sandbox.api.posta.hu/v2/mplapi",
                 "description" => "Sandbox",
+            ],
+            [
+                "url" => "https://core.api.posta.hu/v2/mplapi",
+                "description" => "Production",
             ]
         ];
     }
